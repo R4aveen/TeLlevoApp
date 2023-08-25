@@ -1,0 +1,80 @@
+.fondo {
+  --background: url("../fondoo.jpg");
+  background-size: cover;
+}
+
+.fondo::before {
+  content: ""; 
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--background);
+  filter: blur(10px);
+  z-index: -1; 
+}
+  
+  .fondoo {
+    display: flex;
+    align-items: center;
+    --background: rgb(148, 216, 236);
+    padding: 10px;
+  }
+  
+  .letra {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: black;
+    text-align: center;
+    font-size: 17px;
+    margin-left: 10px;
+  }
+  
+  ion-avatar {
+    width: 32px;
+    height: 32px;
+  }
+  
+  h5 {
+    color: black;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .barra-busqueda {
+    --background: #8a8a8a;
+    --border-radius: 25px;
+  }
+  
+  .botones-color-fondoo {
+    --background: rgb(13, 76, 112);
+    color: white;
+  }
+  
+  p {
+    color: black;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .col-tarjeta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .historial {
+    border: 1px solid rgb(129, 18, 204);
+    border-radius: 10px;
+    padding: 10px; 
+    margin: 10px 0; 
+    background-color: #59aedf69;
+  }
+  
+  ion-img{
+    .rounded-image {
+      border-radius: 25% ;
+    }
+  }
