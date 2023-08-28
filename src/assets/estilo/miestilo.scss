@@ -1,5 +1,5 @@
 .fondo {
-  --background: url("../fondoo.jpg");
+  --background: #284F5F;
   background-size: cover;
 }
 
@@ -18,13 +18,13 @@
   .fondoo {
     display: flex;
     align-items: center;
-    --background: rgb(148, 216, 236);
+    --background: #5D8D9C;
     padding: 10px;
   }
   
   .letra {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    color: black;
+    color:#E2D0B2;
     text-align: center;
     font-size: 17px;
     margin-left: 10px;
@@ -43,8 +43,9 @@
   }
   
   .barra-busqueda {
-    --background: #8a8a8a;
+    --background: #ffffff;
     --border-radius: 25px;
+    color: black;
   }
   
   .botones-color-fondoo {
@@ -77,4 +78,20 @@
     .rounded-image {
       border-radius: 25% ;
     }
+  }
+
+  .texto-boton{
+    --background-color:#e8f4f8;
+  }
+
+  html,body {
+    scrollbar-color:  transparent transparent;
+    scrollbar-width: 0%;
+  }
+
+  .container{
+    justify-content: center;
+    justify-items: center;
+    padding: auto;
+    margin-left: 10px;
   }

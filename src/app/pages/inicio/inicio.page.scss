@@ -1,0 +1,83 @@
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  
+    align-items: center;
+    justify-content: space-between;
+    text-align: start;
+  
+    height: 300px;
+    width: 300px;
+  
+    margin: 0 auto;
+  }
+  
+  b {
+    width: 100%;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color:#E2D0B2;
+
+  }
+  
+  .ripple-parent {
+    position: relative;
+    overflow: hidden;
+  
+    border: 1px solid #ddd;
+  }
+  
+  .rectangle {
+    width: 200px;
+    height: 100px;
+  }
+  
+  .rounded-rectangle {
+    width: 165px;
+    height: 65px;
+    border-radius: 8px;
+  }
+  
+  .circle {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    margin-right: 20px;
+  }
+
+  .container-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px; /* Ajusta la altura según sea necesario */
+    margin-top: 20px; /* Añade un margen superior según sea necesario */
+  
+    .swiper-container {
+      width: 80%;
+      max-width: 400px;
+      border: 1px solid #ccc;
+  
+      .swiper-slide {
+        position: relative;
+  
+        img {
+          width: 100%;
+          height: auto;
+        }
+  
+        .button-wrapper {
+          position: absolute;
+          bottom: 10px;
+          left: 10px;
+  
+          button {
+            background-color: transparent;
+            border: none;
+            color: white;
+            font-size: 14px;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+  
