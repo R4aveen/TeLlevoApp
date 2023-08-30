@@ -1,19 +1,21 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
-
-import { IonicModule } from '@ionic/angular';
-
-import { ActividadPageRoutingModule } from './actividad-routing.module';
-
+import { IonicModule } from '@ionic/angular'; // Import IonicModule
+import { RouterModule, Routes } from '@angular/router';
 import { ActividadPage } from './actividad.page';
+
+const routes: Routes = [
+  {
+    path: '',
+    component: ActividadPage
+  }
+];
 
 @NgModule({
   imports: [
     CommonModule,
-    FormsModule,
-    IonicModule,
-    ActividadPageRoutingModule
+    IonicModule, // Add IonicModule to imports
+    RouterModule.forChild(routes)
   ],
   declarations: [ActividadPage]
 })

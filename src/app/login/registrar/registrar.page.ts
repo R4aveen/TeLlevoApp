@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { AlertController } from '@ionic/angular';
 
 @Component({
   selector: 'app-registrar',
@@ -7,7 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegistrarPage implements OnInit {
 
-  constructor() { }
+  constructor(
+    private alertCtrl:AlertController,
+    private router: Router
+  ) { }
+
+  registrar(){
+    this.router.navigate(['../inicio']);
+  }
 
   ngOnInit() {
   }

@@ -1,0 +1,28 @@
+.historial {
+    padding: 20px;
+  }
+  
+  .viaje-card {
+    margin-bottom: 10px;
+  
+    ion-card-header {
+      font-weight: bold;
+    }
+  
+    ion-card-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  
+      .favorito-icon {
+        color: gray;
+        font-size: 20px;
+        cursor: pointer;
+      }
+  
+      .favorito-icon.active {
+        color: red;
+      }
+    }
+  }
+  

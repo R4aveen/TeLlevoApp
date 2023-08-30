@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular'; // Asegúrate de importar NavController
 import Swiper from 'swiper';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-inicio',
@@ -11,7 +12,7 @@ export class InicioPage implements OnInit {
 
   hayUltimosViajes: boolean = false; // Cambia según tus necesidades
 
-  constructor(private navCtrl: NavController) {}
+  constructor(private navCtrl: NavController, private router: Router) {}
 
   ngOnInit() {}
 
@@ -33,5 +34,8 @@ export class InicioPage implements OnInit {
         prevEl: '.swiper-button-prev', // Clase del botón "Anterior"
       },
     });
+  }
+  irACuenta() {
+    this.router.navigate(['cuenta']);
   }
 }
