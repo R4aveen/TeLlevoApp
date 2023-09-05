@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { TablassComponent } from './pages/tablass/tablass.component';
 
 const routes: Routes = [
   {
@@ -8,7 +9,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'splash',
     pathMatch: 'full'
   },
   {
@@ -35,11 +36,43 @@ const routes: Routes = [
     path: 'cuenta',
     loadChildren: () => import('./pages/cuenta/cuenta.module').then( m => m.CuentaPageModule)
   },
+  {
+    path: 'splash',
+    loadChildren: () => import('./pages/splash/splash.module').then( m => m.SplashPageModule)
+  },
+  {
+    path: 'admin',
+    loadChildren: () => import('./login/admin/admin.module').then( m => m.AdminPageModule)
+  },
 ];
 
 @NgModule({
   imports: [
-    RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })
+    RouterModule.forRoot([
+      {
+        path: '',
+        component: TablassComponent,
+        children: [
+          {
+            path: '',
+            pathMatch: 'full',
+            redirectTo: 'inicio',
+          },
+          {
+            path: 'inicio',
+            loadChildren: () => import('./pages/inicio/inicio.module').then((m) => m.InicioPageModule),
+          },
+          {
+            path: 'actividad',
+            loadChildren: () => import('./pages/actividad/actividad.module').then((m) => m.ActividadPageModule),
+          },
+          {
+            path: 'configuracion',
+            loadChildren: () => import('./pages/configuracion/configuracion.module').then((m) => m.ConfiguracionPageModule),
+          },
+        ],
+      },
+    ]),
   ],
   exports: [RouterModule]
 })

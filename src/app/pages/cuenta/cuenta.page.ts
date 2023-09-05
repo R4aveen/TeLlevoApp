@@ -15,7 +15,7 @@ export class CuentaPage implements OnInit {
   ) { }
 
   pag1(){
-    this.router.navigate(['pag1']);
+    this.router.navigate(['home']);
   }
   ngOnInit() {
   }

@@ -3,6 +3,7 @@ import { NavController } from '@ionic/angular'; // Asegúrate de importar NavCon
 import Swiper from 'swiper';
 import { Router } from '@angular/router';
 
+
 @Component({
   selector: 'app-inicio',
   templateUrl: './inicio.page.html',
@@ -23,15 +24,15 @@ export class InicioPage implements OnInit {
 
   ionViewDidEnter() {
     const mySwiper = new Swiper('.swiper-container', {
-      initialSlide: 2, // Inicia en el medio (índice 2)
+      initialSlide: 2, 
       autoplay: {
-        delay: 3000, // Tiempo en milisegundos entre diapositivas
-        disableOnInteraction: false, // Permite que el movimiento automático continúe incluso si el usuario interactúa
+        delay: 3000, 
+        disableOnInteraction: false, 
       },
-      loop: true, // Activa el looping
+      loop: true, 
       navigation: {
-        nextEl: '.swiper-button-next', // Clase del botón "Siguiente"
-        prevEl: '.swiper-button-prev', // Clase del botón "Anterior"
+        nextEl: '.swiper-button-next', 
+        prevEl: '.swiper-button-prev', 
       },
     });
   }

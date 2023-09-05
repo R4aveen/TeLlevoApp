@@ -8,12 +8,15 @@ import { RegistrarPageRoutingModule } from './registrar-routing.module';
 
 import { RegistrarPage } from './registrar.page';
 
+import { AppMaterialModule } from 'src/app/app--material.module';
+
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    RegistrarPageRoutingModule
+    RegistrarPageRoutingModule,
+    AppMaterialModule
   ],
   declarations: [RegistrarPage]
 })

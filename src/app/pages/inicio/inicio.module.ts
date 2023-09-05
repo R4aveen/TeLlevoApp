@@ -8,14 +8,19 @@ import { InicioPageRoutingModule } from './inicio-routing.module';
 
 import { InicioPage } from './inicio.page';
 
+import { TablassComponent } from '../tablass/tablass.component';
+
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    InicioPageRoutingModule
+    InicioPageRoutingModule,
+    TablassComponent
   ],
-  declarations: [InicioPage]
+  declarations: [InicioPage,
+  TablassComponent],
+
 })
 export class InicioPageModule {}
